@@ -1,5 +1,5 @@
 {
-  "name": "project-space",
+  "name": "space-travellers",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,10 +17,11 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-redux": "^8.0.2",
-    "react-router": "^6.3.0",
+    "react-router-dom": "^6.0.2",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
     "redux-logger": "^3.0.6",
-    "stylelint-csstree-validator": "^1.9.0",
+    "redux-thunk": "^2.4.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,13 +47,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.26.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^21.0.0",
-    "stylelint-scss": "^3.21.0"
   }
 }
