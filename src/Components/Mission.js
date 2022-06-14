@@ -1,6 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Mission = ({ name, id, description, member }) => {
+const Mission = (props) => {
+  const { id, name, description, member } = props;
+
   return (
     <div className="mission-div">
       <p className="mission bold">{name}</p>
@@ -13,6 +16,13 @@ const Mission = ({ name, id, description, member }) => {
       </div>
     </div>
   );
+};
+
+Mission.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  member: PropTypes.bool.isRequired,
 };
 
 export default Mission;
