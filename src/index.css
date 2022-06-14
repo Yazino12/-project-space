@@ -166,6 +166,45 @@ nav {
   border: 1px solid var(--first-color);
 }
 
+
 .joined {
   background-color: var(--container-color);
+}
+
+.rockets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  width: 95%;
+  margin: auto;
+}
+
+.rocket {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.rocket img {
+  width: 250px;
+  height: 200px;
+}
+
+.rocket .rocket-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  width: 70%;
+}
+
+.rocket .rocket-info button {
+  background-color: var(--first-color);
+  color: var(--bg-color);
+  border: none;
+  width: 200px;
+  padding: 1em;
+  border-radius: 0.3em;
+  cursor: pointer;
 }
