@@ -1,10 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { joinMission } from '../Redux/Missions/missions';
 import { useDispatch } from 'react-redux/es/hooks/useDispatch';
 import { leaveMission } from '../Redux/Missions/missions';
 
-const Mission = ({ name, id, description, member }) => {
-  const dispatch = useDispatch();
+const Mission = (props) => {
+  const { id, name, description, member } = props;
+
   return (
     <div className="mission-div">
       <p className="mission bold">{name}</p>
@@ -32,6 +35,13 @@ const Mission = ({ name, id, description, member }) => {
       </div>
     </div>
   );
+};
+
+Mission.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  member: PropTypes.bool.isRequired,
 };
 
 export default Mission;
