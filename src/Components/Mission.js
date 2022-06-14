@@ -8,6 +8,8 @@ import { leaveMission } from '../Redux/Missions/missions';
 const Mission = (props) => {
   const { id, name, description, member } = props;
 
+  const dispatch = useDispatch();
+
   return (
     <div className={member ? 'mission-div joined' : 'mission-div'}>
       <p className="mission bold">{name}</p>
