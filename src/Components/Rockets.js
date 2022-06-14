@@ -1,10 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux/es/exports';
-import { fetchMissions } from '../Redux/Missions/missions';
+import { fetchRockets } from '../Redux/Rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  window.addEventListener('load', () => dispatch(fetchMissions()));
+
+  window.addEventListener('load', () => dispatch(fetchRockets()));
+
   return <div>Rockets</div>;
 };
 
