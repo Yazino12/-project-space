@@ -76,3 +76,92 @@ nav {
   text-decoration: none;
   color: var(--first-color);
 }
+
+.missions-section {
+  padding: 1rem 3rem;
+}
+
+.missions-header-section {
+  display: flex;
+}
+
+.mission,
+.mission-description,
+.active-div {
+  border-right: 1px solid lightgrey;
+}
+
+.mission {
+  width: 10%;
+  padding: 0.5rem;
+}
+
+.mission-description {
+  width: 60%;
+  padding: 0.5rem;
+}
+
+.mission-div {
+  display: flex;
+  border-top: 1px solid lightgrey;
+}
+
+.active-div {
+  width: 15%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.missions {
+  border: 1px solid lightgray;
+}
+
+.status-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+.bold {
+  font-weight: var(--font-semi-bold);
+  opacity: 0.9;
+}
+
+.about {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+
+.join-btn {
+  padding: 0.5rem;
+  border: 1px solid var(--text-color);
+  border-radius: 0.2rem;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: poppins, sans-serif;
+  outline: none;
+  cursor: pointer;
+}
+
+.leave-btn {
+  border: 1px solid red;
+  color: red;
+}
+
+.status-btn {
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  border: 1px solid grey;
+  outline: none;
+  background-color: grey;
+  font-family: poppins, sans-serif;
+  color: var(--bg-color);
+}
+
+.member {
+  background-color: var(--first-color);
+  border: 1px solid var(--first-color);
+}
