@@ -12,7 +12,17 @@ const Mission = (props) => {
         <button className="status-btn">Not a member</button>
       </div>
       <div className="status-div">
-        <button className="join-btn">Join mission</button>
+        {member ? (
+          <button className="join-btn leave-btn">Leave Mission</button>
+        ) : (
+          <button
+            className="join-btn"
+            id={id}
+            onClick={() => dispatch(joinMission(id))}
+          >
+            Join mission
+          </button>
+        )}
       </div>
     </div>
   );

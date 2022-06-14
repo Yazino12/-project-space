@@ -6,6 +6,13 @@ const missionsReducer = (state = [], action) => {
     case 'loadMissions':
       state = action.playload;
       return state;
+    case 'join':
+      const id = action.playload;
+      const newState = state.map((mission) => {
+        if (mission.mission_id !== id) return mission;
+        return { ...mission, member: true };
+      });
+      return newState;
     default:
       return state;
   }
@@ -29,6 +36,13 @@ export const fetchMissions = () => async (dispatch) => {
     type: 'loadMissions',
     playload: missions,
   });
+};
+
+export const joinMission = (id) => {
+  return {
+    type: 'join',
+    playload: id,
+  };
 };
 
 export default missionsReducer;
