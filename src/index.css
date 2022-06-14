@@ -166,6 +166,10 @@ nav {
   border: 1px solid var(--first-color);
 }
 
+.joined {
+  background-color: var(--container-color);
+}
+
 .rockets-container {
   display: flex;
   flex-direction: column;

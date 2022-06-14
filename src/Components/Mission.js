@@ -9,11 +9,13 @@ const Mission = (props) => {
   const { id, name, description, member } = props;
 
   return (
-    <div className="mission-div">
+    <div className={member ? 'mission-div joined' : 'mission-div'}>
       <p className="mission bold">{name}</p>
       <p className="mission-description about">{description}</p>
       <div className="active-div" id={id}>
-        <button className="status-btn">Not a member</button>
+        <button className={member ? 'status-btn member' : 'status-btn'}>
+          {member ? 'Active Member' : 'Not a member'}
+        </button>
       </div>
       <div className="status-div">
         {member ? (
