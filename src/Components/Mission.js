@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { joinMission } from '../Redux/Missions/missions';
+import { useDispatch } from 'react-redux/es/hooks/useDispatch';
+import { leaveMission } from '../Redux/Missions/missions';
+
 const Mission = (props) => {
   const { id, name, description, member } = props;
 
@@ -13,7 +17,12 @@ const Mission = (props) => {
       </div>
       <div className="status-div">
         {member ? (
-          <button className="join-btn leave-btn">Leave Mission</button>
+          <button
+            className="join-btn leave-btn"
+            onClick={() => dispatch(leaveMission(id))}
+          >
+            Leave Mission
+          </button>
         ) : (
           <button
             className="join-btn"
