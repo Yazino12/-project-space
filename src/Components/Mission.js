@@ -1,6 +1,9 @@
 import React from 'react';
+import { joinMission } from '../Redux/Missions/missions';
+import { useDispatch } from 'react-redux/es/hooks/useDispatch';
 
 const Mission = ({ name, id, description, member }) => {
+  const dispatch = useDispatch();
   return (
     <div className="mission-div">
       <p className="mission bold">{name}</p>
@@ -9,7 +12,17 @@ const Mission = ({ name, id, description, member }) => {
         <button className="status-btn">Not a member</button>
       </div>
       <div className="status-div">
-        <button className="join-btn">Join mission</button>
+        {member ? (
+          <button className="join-btn leave-btn">Leave Mission</button>
+        ) : (
+          <button
+            className="join-btn"
+            id={id}
+            onClick={() => dispatch(joinMission(id))}
+          >
+            Join mission
+          </button>
+        )}
       </div>
     </div>
   );
