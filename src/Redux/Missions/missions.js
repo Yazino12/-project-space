@@ -1,10 +1,7 @@
-import { createStore } from 'redux';
-import logger from 'redux-logger';
-import thunk from 'redux-thunk';
-import { applyMiddleware } from 'redux';
 const link = 'https://api.spacexdata.com/v3/missions';
+
 //REDUCERS
-const reducer = (state = [], action) => {
+const missionsReducer = (state = [], action) => {
   switch (action.type) {
     case 'loadMissions':
       state = action.playload;
@@ -34,7 +31,4 @@ export const fetchMissions = () => async (dispatch) => {
   });
 };
 
-// STORE
-export const store = createStore(reducer, applyMiddleware(logger, thunk));
-
-export default reducer;
+export default missionsReducer;

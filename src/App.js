@@ -4,7 +4,7 @@ import Rockets from './Components/Rockets';
 import Missions from './Components/Missions';
 import Profile from './Components/Profile';
 import { Provider } from 'react-redux';
-import { store } from './Redux/Missions/missions';
+import store from './Redux/configStore';
 
 function App() {
   return (
