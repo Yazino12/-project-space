@@ -13,6 +13,13 @@ const missionsReducer = (state = [], action) => {
         return { ...mission, member: true };
       });
       return newState;
+    case 'leave':
+      const key = action.playload;
+      const leaveMission = state.map((mission) => {
+        if (mission.mission_id !== key) return mission;
+        return { ...mission, member: false };
+      });
+      return leaveMission;
     default:
       return state;
   }
@@ -45,4 +52,10 @@ export const joinMission = (id) => {
   };
 };
 
+export const leaveMission = (id) => {
+  return {
+    type: 'leave',
+    playload: id,
+  };
+};
 export default missionsReducer;
