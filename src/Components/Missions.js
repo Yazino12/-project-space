@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions } from '../Redux/Missions/missions';
-import { useDispatch } from 'react-redux/es/hooks/useDispatch';
-import { useSelector } from 'react-redux/es/hooks/useSelector';
 import Mission from './Mission';
 
 const Missions = () => {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, []);
+
   const missions = useSelector((state) => state.missions);
   return (
     <section className="missions-section">
