@@ -165,3 +165,7 @@ nav {
   background-color: var(--first-color);
   border: 1px solid var(--first-color);
 }
+
+.joined {
+  background-color: var(--container-color);
+}
