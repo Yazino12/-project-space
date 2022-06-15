@@ -20,6 +20,7 @@ const Rockets = () => {
           description={item.description}
           flickr_images={item.flickr_images}
           key={item.id}
+          reserved={item.reserved}
         />
       ))}
     </div>
