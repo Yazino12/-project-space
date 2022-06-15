@@ -15,7 +15,7 @@ const Profile = () => {
         <div className={missions.length > 0 ? 'profile-rocket-div' : 'none'}>
           {missions.length > 0
             ? missions.map((mission) => (
-                <p key={mission.nission_id} className="mission-profile">
+                <p key={mission.mission_id} className="mission-profile">
                   {mission.mission_name}
                 </p>
               ))
