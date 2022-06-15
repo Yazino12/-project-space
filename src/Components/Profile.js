@@ -22,15 +22,21 @@ const Profile = () => {
             : 'No missions booked'}
         </div>
       </div>
-      <div className="reserved-rockets">
+      <div className="rockets-profile">
         <h2>My Rockets</h2>
-        {reservedRockets.map((rocket) => {
-          return (
-            <p key={rocket.id} className="reserved-rocket">
-              {rocket.rocket_name}
-            </p>
-          );
-        })}
+        <div
+          className={reservedRockets.length > 0 ? 'profile-rocket-div' : 'none'}
+        >
+          {reservedRockets.length > 0
+            ? reservedRockets.map((rocket) => {
+                return (
+                  <p key={rocket.id} className="rocket-profile">
+                    {rocket.rocket_name}
+                  </p>
+                );
+              })
+            : 'No rockets reserved'}
+        </div>
       </div>
     </div>
   );

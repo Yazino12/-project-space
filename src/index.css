@@ -234,25 +234,9 @@ nav {
   margin: 1em auto;
 }
 
-.profile-container .joined-missions,
-.profile-container .reserved-rockets {
+.profile-container .missions-profile,
+.profile-container .rockets-profile {
   flex: 1;
-}
-
-.profile-container .reserved-rockets .reserved-rocket,
-.profile-container .joined-missions .joined-mission {
-  border: 1px solid var(--text-color);
-  padding: 1em;
-}
-
-.mission-profile {
-  border-top: 1px solid grey;
-  padding: 1rem;
-}
-
-.missions-profile {
-  width: 40%;
-  margin-right: 2rem;
 }
 
 .profile-rocket-div {
@@ -260,6 +244,12 @@ nav {
   border-top: none;
   margin-top: var(--mb-1);
   border-radius: 0.2rem;
+}
+
+.mission-profile,
+.rocket-profile {
+  border-top: 1px solid grey;
+  padding: 1rem;
 }
 
 .none {
