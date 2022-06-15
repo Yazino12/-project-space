@@ -244,3 +244,24 @@ nav {
   border: 1px solid var(--text-color);
   padding: 1em;
 }
+
+.mission-profile {
+  border-top: 1px solid grey;
+  padding: 1rem;
+}
+
+.missions-profile {
+  width: 40%;
+  margin-right: 2rem;
+}
+
+.profile-rocket-div {
+  border: 1px solid grey;
+  border-top: none;
+  margin-top: var(--mb-1);
+  border-radius: 0.2rem;
+}
+
+.none {
+  border: none;
+}
