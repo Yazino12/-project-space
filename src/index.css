@@ -198,6 +198,15 @@ nav {
   width: 70%;
 }
 
+.rocket .rocket-info .reserved-badge {
+  font-size: 0.8rem;
+  background-color: #4cacbc;
+  margin-right: 0.5em;
+  border-radius: 0.3em;
+  padding: 0 0.5em;
+  color: var(--bg-color);
+}
+
 .rocket .rocket-info button {
   background-color: var(--first-color);
   color: var(--bg-color);
@@ -206,4 +215,10 @@ nav {
   padding: 1em;
   border-radius: 0.3em;
   cursor: pointer;
+}
+
+.rocket .rocket-info .reserved-button {
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
 }
