@@ -2,6 +2,7 @@ const link = 'https://api.spacexdata.com/v3/rockets';
 
 const LOADROCKETS = 'LOADROCKETS';
 const RESERVEROCKET = 'RESERVEROCKET';
+const CANCELROCKET = 'CANCELROCKET';
 
 //REDUCERS
 const rocketsReducer = (state = [], action) => {
@@ -10,11 +11,18 @@ const rocketsReducer = (state = [], action) => {
       return action.playload;
     case RESERVEROCKET:
       const id = action.playload;
-      const newState = state.map((rocket) => {
+      const newStateReserve = state.map((rocket) => {
         if (rocket.id !== id) return rocket;
         return { ...rocket, reserved: true };
       });
-      return newState;
+      return newStateReserve;
+    case CANCELROCKET:
+      const key = action.playload;
+      const newStateCancel = state.map((rocket) => {
+        if (rocket.id !== key) return rocket;
+        return { ...rocket, reserved: false };
+      });
+      return newStateCancel;
     default:
       return state;
   }
@@ -43,6 +51,13 @@ export const fetchRockets = () => async (dispatch) => {
 export const reserveRocket = (id) => {
   return {
     type: RESERVEROCKET,
+    playload: id,
+  };
+};
+
+export const cancelRocket = (id) => {
+  return {
+    type: CANCELROCKET,
     playload: id,
   };
 };
