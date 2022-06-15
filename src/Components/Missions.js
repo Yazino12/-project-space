@@ -4,13 +4,13 @@ import { fetchMissions } from '../Redux/Missions/missions';
 import Mission from './Mission';
 
 const Missions = () => {
+  const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMissions());
-  }, []);
+    if (missions.length === 0) dispatch(fetchMissions());
+  }, [dispatch]);
 
-  const missions = useSelector((state) => state.missions);
   return (
     <section className="missions-section">
       <div className="missions">

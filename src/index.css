@@ -43,6 +43,10 @@ body {
   padding: 0 1.5rem;
 }
 
+.app {
+  height: 100vh;
+}
+
 .logo {
   width: 5%;
   margin-right: 2rem;
@@ -221,4 +225,22 @@ nav {
   background-color: transparent;
   border: 1px solid var(--text-color);
   color: var(--text-color);
+}
+
+.profile-container {
+  display: flex;
+  gap: 1em;
+  width: 90%;
+  margin: 1em auto;
+}
+
+.profile-container .joined-missions,
+.profile-container .reserved-rockets {
+  flex: 1;
+}
+
+.profile-container .reserved-rockets .reserved-rocket,
+.profile-container .joined-missions .joined-mission {
+  border: 1px solid var(--text-color);
+  padding: 1em;
 }
