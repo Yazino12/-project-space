@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../logo/planet.png';
+import logo from '../assets/planet.png';
 
 const activeStyle = {
   color: 'var(--text-color)',
