@@ -10,8 +10,11 @@
 
 | **Profile** | **Rockets** | **Missions** |
 
-| :---------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/Yazino12/-project-space/blob/dev/src/assets/profile.png?raw=true" width="2470" height="1160"> | <img src="https://github.com/Yazino12/-project-space/blob/dev/src/assets/rockets.png?raw=true" width="2470" height="1160"> | <img src="https://github.com/Yazino12/-project-space/blob/dev/src/assets/missions.png?raw=true" width="2470" height="1160"> |
+![image](https://user-images.githubusercontent.com/98453979/174069804-570edd93-35e8-439d-b9cd-a885fa900bf1.png)
+
+![image](https://user-images.githubusercontent.com/98453979/174070002-e4782bc8-9000-42a0-87a1-72c160e9a99b.png)
+
+![image](https://user-images.githubusercontent.com/98453979/174070245-42ab53cf-6e7b-456e-a35f-63fdf937301b.png)
 
 ## Built With
 
@@ -56,6 +59,8 @@ To get a local copy up and running follow these setup steps.
 👤 **Frankline Osoro**
 
 - GitHub: [frank1738](https://github.com/frank1738)
+- Twitter: [@frankhiggins08](https://twitter.com/frankhiggins08)
+- LinkedIn: [Frankline Osoro](http://www.linkedin.com/in/frankline-osoro-b526ba18b)
 
 ## 🤝 Contributing
 
