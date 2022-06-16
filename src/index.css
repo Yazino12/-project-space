@@ -1,8 +1,257 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
   margin: 0;
-  font-family: 'Segoe UI', 'Roboto';
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: 'Courier New', monospace;
+:root {
+  --hue-color: 250;
+  --first-color: #0290ff;
+  --first-color-lighter: #4386bf;
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --container-color: #ebecf0;
+  --bg-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --body-font: poppins, sans-serif;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+}
+
+body {
+  font-family: poppins, sans-serif;
+  padding: 0 1.5rem;
+}
+
+.app {
+  height: 100vh;
+}
+
+.logo {
+  width: 5%;
+  margin-right: 2rem;
+}
+
+nav {
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  padding: 1.5rem 0;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header {
+  font-size: var(--h1-font-size);
+  opacity: 0.9;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--first-color);
+}
+
+.missions-section {
+  padding: 1rem 3rem;
+}
+
+.missions-header-section {
+  display: flex;
+}
+
+.mission,
+.mission-description,
+.active-div {
+  border-right: 1px solid lightgrey;
+}
+
+.mission {
+  width: 10%;
+  padding: 0.5rem;
+}
+
+.mission-description {
+  width: 60%;
+  padding: 0.5rem;
+}
+
+.mission-div {
+  display: flex;
+  border-top: 1px solid lightgrey;
+}
+
+.active-div {
+  width: 15%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.missions {
+  border: 1px solid lightgray;
+}
+
+.status-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+.bold {
+  font-weight: var(--font-semi-bold);
+  opacity: 0.9;
+}
+
+.about {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+
+.join-btn {
+  padding: 0.5rem;
+  border: 1px solid var(--text-color);
+  border-radius: 0.2rem;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: poppins, sans-serif;
+  outline: none;
+  cursor: pointer;
+}
+
+.leave-btn {
+  border: 1px solid red;
+  color: red;
+}
+
+.status-btn {
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  border: 1px solid grey;
+  outline: none;
+  background-color: grey;
+  font-family: poppins, sans-serif;
+  color: var(--bg-color);
+}
+
+.member {
+  background-color: var(--first-color);
+  border: 1px solid var(--first-color);
+}
+
+.joined {
+  background-color: var(--container-color);
+}
+
+.rockets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  width: 95%;
+  margin: auto;
+}
+
+.rocket {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.rocket img {
+  width: 250px;
+  height: 200px;
+}
+
+.rocket .rocket-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  width: 70%;
+}
+
+.rocket .rocket-info .reserved-badge {
+  font-size: 0.8rem;
+  background-color: #4cacbc;
+  margin-right: 0.5em;
+  border-radius: 0.3em;
+  padding: 0 0.5em;
+  color: var(--bg-color);
+}
+
+.rocket .rocket-info button {
+  background-color: var(--first-color);
+  color: var(--bg-color);
+  border: none;
+  width: 200px;
+  padding: 1em;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+.rocket .rocket-info .reserved-button {
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+}
+
+.profile-container {
+  display: flex;
+  gap: 1em;
+  width: 90%;
+  margin: 1em auto;
+}
+
+.profile-container .missions-profile,
+.profile-container .rockets-profile {
+  flex: 1;
+}
+
+.profile-rocket-div {
+  border: 1px solid grey;
+  border-top: none;
+  margin-top: var(--mb-1);
+  border-radius: 0.2rem;
+}
+
+.mission-profile,
+.rocket-profile {
+  border-top: 1px solid grey;
+  padding: 1rem;
+}
+
+.none {
+  border: none;
 }
